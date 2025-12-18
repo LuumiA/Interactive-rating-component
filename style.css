@@ -1,9 +1,159 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Reset de base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%; /* 16px par défaut, plus simple pour les rem */
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: hsl(216, 12%, 8%);
+}
+
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-rating,
+.card-thankyou {
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 340px;
+  width: 90%;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.icon-stars {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: hsl(213, 19%, 22%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+.text {
+  color: hsl(217, 12%, 63%);
+  font-size: 0.9rem;
+}
+
+.rating-list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.number {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(213, 19%, 22%);
+  color: hsl(217, 12%, 63%);
+  cursor: pointer;
+}
+
+.submit-btn {
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.number:hover,
+.number:focus-visible {
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
+}
+
+.submit-btn:hover,
+.submit-btn:focus-visible {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+.card-thankyou {
+  display: none;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-thankyou {
+  display: flex;
+  justify-content: center;
+}
+
+.selected-rating {
+  margin-inline: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background-color: hsl(213, 19%, 22%);
+  color: hsl(25, 97%, 53%);
+  font-size: 0.9rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.text-thankyou {
+  color: hsl(217, 12%, 63%);
+  font-size: 0.9rem;
 }
