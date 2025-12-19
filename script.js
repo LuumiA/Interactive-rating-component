@@ -1,3 +1,4 @@
+// @ts-nocheck
 const ratingButtons = document.querySelectorAll(".number");
 const submit = document.querySelector(".submit-btn");
 const cardRating = document.querySelector(".card-rating");
@@ -14,4 +15,12 @@ ratingButtons.forEach((button) => {
     });
     button.classList.add("selected");
   });
+});
+
+submit.addEventListener("click", () => {
+  if (rating > 0) {
+    selectRating.textContent = "You selected " + rating + " out of 5";
+    cardRating.style.display = "none";
+    cardThankYou.style.display = "flex";
+  }
 });
